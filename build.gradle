@@ -20,10 +20,45 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url "https://oss.jfrog.org/libs-snapshot" }
+        maven { url 'https://jitpack.io' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 25
+    targetSdkVersion = 28
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.3'
+
+    // App dependencies
+    supportLibraryVersion = '25.3.1'
+    frescoVersion = "2.1.0"
+    loggerVersion = '2.2.0'
+    retrofitVersion = "2.7.2"
+    okhttploggingVersion = "4.4.0"
+    okhttpVersion = "4.4.0"
+    gsonVersion = "2.8.6"
+    multidexVersion = "1.0.3"
+    eventbusVersion = "3.2.0"
+    circleImageviewVersion = '3.1.0'
+    rxPerssionsVersion = '0.10.2'
+    xrecyclerviewVersion = "1.6.0"
+    picassoVersion = "2.3.2"
+    bannerdVersion = "2.0.0-alpha02"
+
+    rxjavaVersion = '2.1.1'
+    rxandroidVersion = '2.1.1'
+    daggerVersion  = "2.10-rc4"
+
+    fragmentationVersion = "1.1.6"
+    qmuiVersion = "1.0.4"
+
+    butterknifeVersion = "10.2.1"
 }
